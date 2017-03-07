@@ -13,7 +13,9 @@ var favourites = ["fruit":"Pear", "game":"Tomb Raider", "phone":"iPhone"]
 
 //: To get a specific value for a key, we use this syntax:
 
+favourites["pear"] = "Bosch"
 favourites["fruit"]
+favourites["pear"]
 
 //: To set a specific value for a key, we use this syntax:
 
@@ -25,7 +27,7 @@ favourites["beer"] = "Blue Buck" // notice how "beer" didn't have to exist
 //: Add your favourite color to the favourites dictionary
 
 
-
+favourites["color"] = "black"
 
 
 //: ### Challenge 2
@@ -33,13 +35,37 @@ favourites["beer"] = "Blue Buck" // notice how "beer" didn't have to exist
 //: Change the value in the fruit key to match your favourite fruite
 
 
-
+favourites["fruit"] = "strawberry"
+favourites["fruit"]
+favourites
 
 
 
 //: ### Bonus Challenge
 //:
 //: Create your own empty dictionary for student scores. The key for this dictionary will be a student name, the value will be the score they got in the latest test. For this example add Dan's score to be 100, Cory's score to be 90, and Jeremy's score to be 80
+var studentScores = [String:Int]()
+
+studentScores["Dan"] = 100
+studentScores["Cory"] = 90
+studentScores["Jeremy"] = 80
+
+var alphabetNumbers = [String:Int]()
+
+alphabetNumbers["a"] = 1
+alphabetNumbers["b"] = 2
+var creationCount = 1
+var alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i" , "j" ,"k" , "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var theMasterIndex = 0
+
+for i in 1...26 {
+    alphabetNumbers[alphabets[theMasterIndex]] = creationCount
+    creationCount = creationCount + 1
+    theMasterIndex = theMasterIndex + 1
+}
+
+alphabetNumbers["s"]
+
 
 
 

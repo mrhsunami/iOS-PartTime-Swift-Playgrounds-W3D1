@@ -21,6 +21,7 @@ var thirdElement = fruits[2]
 //: Get the second element in fruits. ie) "Apple"
 
 
+var secondElement = fruits[1]
 
 
 
@@ -34,9 +35,7 @@ fruits.append("Tomato")
 //:
 //: Insert your favourite fruit at the start of the array. (We haven't covered this so do a quick google search)
 
-
-
-
+fruits.insert("Strawberry", at: 0)
 
 //: `fruits` is an array of strings, but you can create arrays of any type of object.
 //: In Swift, the type of object stored in the array needs to be specified.
@@ -50,10 +49,17 @@ var arrayOfBools = [Bool]()
 //: Create an empty array for storing `Int`s, call it `numbers`.
 //: Add the numbers 10, 20, 60, 30, 40 to the array.
 
+var numbers = [Int]()
+numbers.append(10)
+numbers.append(20)
+numbers.append(60)
+numbers.append(30)
+numbers.append(40)
 
+numbers[2]
 
-
-
+let lastOne = numbers.count-1
+numbers[lastOne]
 
 //: ## Loops
 //: Loops are a way to execute the same piece of code multiple times
@@ -71,7 +77,11 @@ for fruit in fruits {
 
 //: ## Bonus Challenge
 //: Write a function that takes in an array of numbers and prints each number in that array
-
+func printNum(_ incomingArray: [Int]) {
+    for eachItem in incomingArray {
+        print(eachItem)
+    }
+}
 
 
 
@@ -79,4 +89,4 @@ for fruit in fruits {
 
 
 // Test it by uncommenting the below line of code:
-//printNum(numbers)
+printNum(numbers)
